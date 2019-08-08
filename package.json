@@ -1,0 +1,54 @@
+{
+  "name": "create-iconfont",
+  "version": "1.0.0",
+  "description": "Icon font creator",
+  "main": "lib/cli.js",
+  "scripts": {
+    "gulp": "gulp",
+    "build": "gulp build",
+    "serve": "gulp serve"
+  },
+  "contributors": [
+    {
+      "name": "Jason Lusk",
+      "email": "jason@jasonlusk.com",
+      "url": "https://github.com/mpalpha/create-iconfont"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "@babel/runtime": "^7.5.5",
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "browser-sync": "^2.26.7",
+    "bs-html-injector": "^3.0.3",
+    "dateformat": "^3.0.3",
+    "debug": "^4.1.1",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-csso": "^3.0.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-file": "^0.4.0",
+    "gulp-iconfont": "^10.0.3",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-load-plugins": "^2.0.0",
+    "gulp-memory-cache": "^0.3.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sizediff": "^0.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-strip-code": "^0.1.4",
+    "gulp-svgmin": "^2.2.0",
+    "marked": "^0.7.0",
+    "parker": "^0.0.10",
+    "specificity-graph": "^0.1.7"
+  }
+}

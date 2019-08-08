@@ -1,0 +1,146 @@
+// variables from gulp tasks
+$font-path: "";
+$font-name: "create-iconfont";
+$font-class-prefix: "icon";
+$font-class-suffix: "create-iconfont";
+$font-time-stamp: "1565295623";
+$font-glyphs-map: (
+  attach: "ea01",
+  contacts: "ea02"
+);
+
+// generated from the icons task in icons.gulp.js using the template at ./templates/_icons.scss
+@font-face {
+  font-family: "#{$font-name}";
+  font-style: normal;
+  font-weight: normal;
+  // sass-lint:disable no-duplicate-properties declaration-colon-newline-after
+  // stylelint-disable declaration-colon-newline-after
+  src: url("#{$font-path}#{$font-name}.eot?#{$font-time-stamp}");
+  src: url("#{$font-path}#{$font-name}.eot?#iefix") format("eot"),
+    url("#{$font-path}#{$font-name}.woff?#{$font-time-stamp}")
+      format("woff"),
+    url("#{$font-path}#{$font-name}.ttf?#{$font-time-stamp}")
+      format("truetype"),
+    url("#{$font-path}#{$font-name}.svg?#{$font-time-stamp}##{$font-name}")
+      format("svg");
+  // stylelint-ensable declaration-colon-newline-after
+  // sass-lint:enable no-duplicate-properties declaration-colon-newline-after
+}
+
+// charachter decode function
+@function icon($character) {
+  @return unquote('"') + unquote(str-insert($character, '\\', 1)) + unquote('"');
+}
+
+// base styles placeholder
+%icon-base-styles {
+  display: inline-block;
+  // sass-lint:disable font-family-no-missing-generic-family-keyword
+  font-family: "#{$font-name}";
+  // sass-lint:enable font-family-no-missing-generic-family-keyword
+  // sass-lint:disable no-vendor-prefixes
+  -webkit-font-smoothing: antialiased;
+  // sass-lint:enable no-vendor-prefixes
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: auto;
+  text-transform: none;
+}
+
+// icons sass character map
+$icons: $font-glyphs-map;
+
+// set unicode character
+@each $name, $icon in $icons {
+  .#{$font-class-prefix} {
+    &.#{$font-class-suffix}-#{$name} {
+      &::before {
+        content: icon($icon);
+      }
+    }
+  }
+}
+
+// Icon Sizes
+// lg makes the font 33% larger relative to the icon container
+// Spinning Icons
+.#{$font-class-prefix} {
+  // Base styles
+  &::before {
+    @extend %icon-base-styles;
+  }
+
+  @for $i from 1 through 5 {
+    $n: if($i == 1, "lg", #{$i}x);
+
+    &-#{$n} {
+      @if ($i == 1) {
+        font-size: (4em / 3);
+        line-height: (3em / 4);
+        vertical-align: -15%;
+      } @else {
+        font-size: #{$i}em;
+      }
+    }
+  }
+
+  &-spin {
+    animation: #{$font-class-prefix}-spin 2s infinite linear;
+
+    @at-root {
+      @keyframes #{$font-class-prefix}-spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(359deg);
+        }
+      }
+    }
+  }
+
+  &-pulse {
+    animation: #{$font-class-prefix}-pulse 1s infinite steps(8);
+
+    @at-root {
+      @keyframes #{$font-class-prefix}-pulse {
+        0% {
+          transform: scale(1);
+        }
+
+        30% {
+          transform: scale(1);
+        }
+
+        40% {
+          transform: scale(1.08);
+        }
+
+        50% {
+          transform: scale(1);
+        }
+
+        60% {
+          transform: scale(1);
+        }
+
+        70% {
+          transform: scale(1.05);
+        }
+
+        80% {
+          transform: scale(1);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}

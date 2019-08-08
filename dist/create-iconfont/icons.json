@@ -1,0 +1,14 @@
+{
+    "icons": [
+        {
+            "id": "attach",
+            "name": "Attach",
+            "unicode": "ea01"
+        },
+        {
+            "id": "contacts",
+            "name": "Contacts",
+            "unicode": "ea02"
+        }
+    ]
+}
