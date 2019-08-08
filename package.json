@@ -9,11 +9,7 @@
     "serve": "gulp serve"
   },
   "contributors": [
-    {
-      "name": "Jason Lusk",
-      "email": "jason@jasonlusk.com",
-      "url": "https://github.com/mpalpha/create-iconfont"
-    }
+    "Jason Lusk <jason@jasonlusk.com> (https://github.com/mpalpha/create-iconfont)"
   ],
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -50,5 +46,18 @@
     "marked": "^0.7.0",
     "parker": "^0.0.10",
     "specificity-graph": "^0.1.7"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mpalpha/create-iconfont.git"
+  },
+  "author": "Jason Lusk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mpalpha/create-iconfont/issues"
+  },
+  "homepage": "https://github.com/mpalpha/create-iconfont#readme"
 }
