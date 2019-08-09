@@ -5,8 +5,9 @@ const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 
 async function main() {
+  process.chdir(__dirname);
   const { stdout, stderr } = await exec(
-    `./node_modules/.bin/gulp ${args.slice(2).join(' ')}`
+    `npx gulp@^4.0.2 ${args.slice(2).join(' ')}`
   );
   if (stderr) {
     console.error(`error: ${stderr}`);

@@ -2,8 +2,8 @@
   "name": "create-iconfont",
   "version": "1.0.1",
   "description": "Icon font creator",
-  "main": "lib/cli.js",
-  "bin": "lib/cli.js",
+  "main": "index.js",
+  "bin": "index.js",
   "scripts": {
     "gulp": "gulp",
     "build": "gulp build",
