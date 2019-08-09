@@ -1,13 +1,12 @@
 {
   "name": "create-iconfont",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Icon font creator",
   "main": "index.js",
   "bin": "index.js",
   "scripts": {
-    "gulp": "npx --ignore-existing gulp@^4.0.2",
-    "build": "npx --ignore-existing gulp@^4.0.2 build",
-    "serve": "npx --ignore-existing gulp@^4.0.2 serve"
+    "build": "npx gulp@^4.0.2 build",
+    "serve": "npx gulp@^4.0.2 serve"
   },
   "contributors": [
     "Jason Lusk <jason@jasonlusk.com> (https://github.com/mpalpha/create-iconfont)"
