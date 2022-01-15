@@ -43,7 +43,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-strip-code": "^0.1.4",
     "gulp-svgmin": "^2.2.0",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "parker": "^0.0.10",
     "specificity-graph": "^0.1.7"
   },
